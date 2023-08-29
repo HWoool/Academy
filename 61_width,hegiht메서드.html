@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.min.js"
+      integrity="sha512-jGsMH83oKe9asCpkOVkBnUrDDTp8wl+adkB2D+//JtlxO4SrLoJdhbOysIFQJloQFD+C4Fl1rMsQZF76JjV0eQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+  </head>
+  <body>
+    <div id="box">나는 박스</div>
+    <script>
+      let width = $("#box").width();
+      let height = $("#box").height();
+      document.write("넓이 : " + width + ", 높이 : " + height);
+      let ww = $(window).width();
+      let wh = $(window).height();
+      document.write("창넓이 : " + ww + "창높이 : " + wh);
+    </script>
+  </body>
+</html>

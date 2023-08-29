@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      #parent {
+        width: 800px;
+        margin: 0 auto;
+        background: skyblue;
+        padding: 0 10px;
+        display: flex;
+        height: 300px;
+        /* 자식들의 가로정렬문제 : 기본값은 flex-start */
+        justify-content: space-between;
+        /* 자식들의 세로정렬문제 : 기본값은 stretch */
+        align-items: center;
+      }
+
+      #parent2 {
+        max-width: 800px;
+        margin: 50px auto;
+        background: pink;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+      }
+      .child2 {
+        flex: 0 1 21%;
+        border: 1px solid red;
+        margin: 10px;
+      }
+
+      .child {
+        border: 1px solid red;
+        /* 
+        float: left;
+        width: 16.6666%; */
+      }
+      /* .child:nth-child(3) {
+        flex: 2;
+      } */
+      /* flex-grow:1 - 부모공간이 남아있으면 자식들이 확장돼서 채워짐 
+         flex-shrink:1 - 부모공간을 넘치게되면 자식들이 축소돼서 채워짐*/
+    </style>
+  </head>
+  <body>
+    <div id="parent">
+      <div class="child">1</div>
+      <div class="child">2</div>
+      <div class="child">3</div>
+      <div class="child">4</div>
+      <div class="child">5</div>
+      <div class="child">6</div>
+    </div>
+    <div id="parent2">
+      <div class="child2">1</div>
+      <div class="child2">2</div>
+      <div class="child2">3</div>
+      <div class="child2">4</div>
+      <div class="child2">5</div>
+      <div class="child2">6</div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.min.js"
+      integrity="sha512-jGsMH83oKe9asCpkOVkBnUrDDTp8wl+adkB2D+//JtlxO4SrLoJdhbOysIFQJloQFD+C4Fl1rMsQZF76JjV0eQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+  </head>
+  <body>
+    <!-- 
+        target : 이벤트를 발생시킨 객체를 반환
+        type : 이벤트의 이름을 반환
+        clientx : 이벤트를 발생한 x좌표값 반환(브라우저 기준)
+        clienty : 이벤트를 발생한 y좌표값 반환(브라우저 기준)
+        screenx : 이벤트를 발생한 x좌표값 반환(모니터 기준)
+        screeny : 이벤트를 발생한 y좌표값 반환(모니터 기준)
+        target : 마우스 왼쪽(0), 가운데 (1), 오른쪽(2) 버튼값 반환
+        preventDefault() : 기본 이벤트를 막아줌
+        stopPropagation() : 이벤트 전파를 막아줌
+             -->
+    <div><a href="http://www.naver.com">네이버</a></div>
+
+    <form action="" method="post" name="join">
+      <input type="text" name="irum" value="" />
+      <button type="submit">전송</button>
+    </form>
+    <div id="parent" style="background: red; padding: 20px">
+      <div id="child" style="background: pink; width: 50px; height: 50px"></div>
+    </div>
+
+    <script>
+      // preventDefault()
+      $("div a").on("click", function (event) {
+        event.preventDefault();
+        console.log(event);
+        // return false;
+      });
+      $("form").on("submit", function (e) {
+        let irum = $("input").val();
+        if (irum) {
+          alert("이름을 입력해주세요.");
+          return false;
+        }
+        e.preventDefault();
+      });
+
+      $("#parent").on("click", function () {
+        $(this).css({
+          background: "blue",
+        });
+      });
+      // 마우스 가져다대면 색 변화
+      //   $("#parent")
+      //     .on("mouseover", function () {
+      //       $(this).css({
+      //         background: "green",
+      //       });
+      //     })
+      //     .on("mouseout", function () {
+      //       $(this).css({
+      //         background: "red",
+      //       });
+      //     });
+      // mouseover, mouseout 따로 안써줄때 function 두개 hover 안에 사용
+      $("#parent").hover(
+        function () {
+          $(this).css({
+            background: "green",
+          });
+        },
+        function () {
+          $(this).css({
+            background: "red",
+          });
+        }
+      );
+      $("#child").on("click", function (e) {
+        e.stopPropagation(); // 이벤트 전파 방지 메서드
+        $(this).css({
+          background: "orange",
+        });
+      });
+    </script>
+  </body>
+</html>

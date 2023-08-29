@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- 블록요소들을 한줄로 정렬하기 위한 방법 -->
+    <!-- 1. display : inline-block; 사이에 여백이 생김 -->
+    <!-- 2. float : left | right  (빈틈은 생기지 않지만 부작용이 발생함.)-->
+    <!--    (1) 자식들이 전부다 float 정렬을 하면 부모구조가 무너짐 : 부모한테 class="cf"추가하거나 overflow:hidden 속성을 추가해서 해결함. -->
+    <!--    (2) 형들이 float 정렬을 하면 동생한테 문제가 생김 : 동생한테 clear:both 추가 -->
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      ul {
+        list-style: none;
+        max-width: 800px;
+        margin: 50px auto 0;
+        border: 1px solid #000;
+        background: pink;
+        overflow: hidden;
+      }
+      ul::after {
+        content: "";
+        display: block;
+        clear: both;
+      }
+      ul li {
+        border: 1px solid #f00;
+        width: 25%;
+        /* display: inline-block; */
+        float: left;
+      }
+    </style>
+    <ul>
+      <li><a href="#">메뉴1</a></li>
+      <li><a href="#">메뉴2</a></li>
+      <li><a href="#">메뉴3</a></li>
+      <li><a href="#">메뉴4</a></li>
+    </ul>
+    <p style="width: 30%; float: left; background: lime">
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla sequi sed
+      id exercitationem cupiditate dolore quas quis illo itaque. Quaerat at non
+      similique labore quos necessitatibus fuga provident sunt laudantium?
+    </p>
+    <p style="width: 70%; float: right; background: orange">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore commodi
+      cupiditate temporibus ratione harum, maiores minima? Ducimus ad nemo
+      suscipit id saepe eveniet ea odio harum, dicta eius. Provident, sapiente!
+      Consequatur, maxime? Sit accusantium facilis odit! Natus, non! Nostrum
+      harum, placeat esse distinctio fuga aliquam aut repellat, perferendis
+      ratione provident facilis repudiandae quam dolor aspernatur? Quo excepturi
+      eveniet maxime necessitatibus.
+    </p>
+    <div style="clear: both">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae suscipit
+      nulla maxime excepturi. Totam omnis consequuntur vel. Aliquid, saepe,
+      voluptatum quo quasi velit dignissimos, id doloribus maiores fugiat
+      molestiae blanditiis.
+    </div>
+  </body>
+</html>

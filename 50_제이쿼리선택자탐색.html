@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.min.js"
+      integrity="sha512-jGsMH83oKe9asCpkOVkBnUrDDTp8wl+adkB2D+//JtlxO4SrLoJdhbOysIFQJloQFD+C4Fl1rMsQZF76JjV0eQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+  </head>
+  <body>
+    <h2>제이쿼리 탐색</h2>
+    <div id="container">
+      <div class="sub">
+        <p id="contchild">div p</p>
+      </div>
+      <p>p</p>
+      <p>p</p>
+      <p id="part1">p</p>
+      <p>p</p>
+      <p>p</p>
+    </div>
+    <h2>순서 선택자</h2>
+    <ul id="nav1">
+      <li>0</li>
+      <li>1</li>
+      <li class="special">2</li>
+      <li>3</li>
+    </ul>
+    <ul id="nav2">
+      <li>0</li>
+      <li>1</li>
+      <li>2</li>
+      <li>3</li>
+    </ul>
+    <script>
+      //$('#container > p') : #container의 자식들중 p들만 지목
+      $("#container").children("p").css({
+        background: "red",
+        color: "#fff",
+      });
+      //$('#container p') : #container의 후손들중 p들만 지목
+      $("#container p").css({
+        fontSize: "20px",
+      });
+      $("#container").find("p").css({
+        fontSize: "20px",
+      });
+      //   $("contchil").parents("#container")
+      //   $("contchilde").parent().parent()
+      $("#contchild").parent("#container").css({
+        border: "3px solid green",
+      });
+      // odd(홀수)와 even(짝수)은 인덱스번호 0번부터 시작함.
+      // eq(),odd,even은 첫번째가 0임
+      $("ul > li:odd").css({ color: "red" });
+      //   $("ul > li:first-child").css({ color: "red" });
+      //   $("ul > li:nth-child(2)").css({ color: "red" });
+      //   $("ul > li:last-child").css({ color: "red" });
+      // eq()는 관계와 상관없이 먼저 마크된 순서대로 인덱스번호가 부여됨.
+      $("ul > li").eq(6).css({ fontSize: "30px" });
+      $("ul > li").eq(-1).css({ background: "green" });
+
+      // siblings() : 나를 제외한 나의 모든형제들
+      $("#nav1 li").eq(0).siblings().css({ background: "yellow" });
+
+      // 바로 다음 형제요소(+) : next(), nextAll()
+      $("#part1").nextAll().css({
+        border: "10px solid violet",
+      });
+      // 바로이전 형제요소 : prev(), prevAll()
+      $("#part1").prevAll().css({
+        borde: "10px solid violet",
+      });
+      // 배열의 filter()와 구분하여 사용할것 : 배열.filter(함수)
+      // filter('선택자'), filter(함수(index,value){})
+      $("ul li").filter(".special").css({
+        margin: "10px 0",
+      });
+
+      // not() :
+      $("ul li").not(".special").css({
+        paddingLeft: "10px 0",
+      });
+      // 3의 배수번째 li들에 보덜르 적용할것
+      $("ul li").filter(function (index, selector) {
+        if (index % 3 == 0) {
+          selector.css({
+            border: "5px solid pink",
+          });
+        }
+      });
+    </script>
+  </body>
+</html>

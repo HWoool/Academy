@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <style>
+      /*  position: absolute | relative | fixed | static */
+      /*  absolute : 자식이 상위요소를 기준으로 위치를 잡을때 갖는 값  */
+      /*             이때 상위요소는 반드시 positon 속성을 가져야하는데 */
+      /*             속성이 없을경우 positon:relative를 적용함 */
+      /*  relative : 자기자신의 현재위치를 기준으로 이동하고자 할때 갖는 값. */
+      /*             주변에 영향을 미치지않음 */
+      /*  fiexd    : 브라우저가 기준이고 스크롤링 상관없이 그위치에 고정됨. */
+      /*  stiki    : 스크롤바를 이동하여 해당박스를 브라우저 꼭대기에서 만났을때 고정시키려면 */
+      body {
+        height: 3000px;
+      }
+      .parent {
+        width: 500px;
+        height: 500px;
+        margin: 0px auto;
+        background: pink;
+        position: fixed;
+        top: 0;
+        left: 0;
+      }
+      .child {
+        width: 100px;
+        height: 100px;
+      }
+      .child:nth-child(1) {
+        background: red;
+      }
+      .child:nth-child(2) {
+        background: green;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin-top: -50px;
+        margin-left: -50px;
+      }
+      .child:nth-child(3) {
+        background: blue;
+      }
+    </style>
+
+    <div class="parent">
+      <div class="child">자식1</div>
+      <div class="child">자식2</div>
+      <div class="child">자식3</div>
+    </div>
+  </body>
+</html>

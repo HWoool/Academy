@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+      ul,
+      ol {
+        list-style: none;
+      }
+      img {
+        max-width: 100%;
+      }
+      .cf::after {
+        content: "";
+        display: block;
+        clear: both;
+      }
+      #header {
+        padding: 20px 50px;
+        border: 0px solid #000;
+        position: relative;
+      }
+      #header h1 {
+        float: left;
+      }
+      #header .membership {
+        float: right;
+      }
+      #header #nav {
+        position: absolute;
+        top: 0%;
+        left: 50%;
+        margin-left: -325px;
+      }
+      #header #nav .depth1 > li {
+        float: left;
+        width: 130px;
+        position: relative;
+      }
+      #header #nav .depth1 li:hover {
+        border: 1px solid #c83044;
+      }
+      #header #nav .depth1 > li a {
+        display: block;
+        padding: 35px 0;
+        text-align: center;
+        border: 0px solid #000;
+      }
+      #header #nav .depth2 {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        height: 190px;
+        padding: 30px 0px;
+        text-align: center;
+        border-right: 1px solid #000;
+      }
+      #header #nav .depth1 > li:hover .depth2 {
+        color: #000;
+      }
+      #header #nav .depth2 li a {
+        display: block;
+        line-height: 2;
+      }
+      #header #nav .depth2 li a:hover {
+        color: #c83044;
+        text-decoration: underline;
+      }
+    </style>
+  </head>
+  <body>
+    <header id="header" class="cf">
+      <h1>
+        <a href="#"><img src="./images/logo.png" /></a>
+      </h1>
+
+      <nav id="nav">
+        <ul class="depth1">
+          <li>
+            <a href="#">회사소개</a>
+            <div>
+              <ul class="depth2">
+                <li><a href="#">회사개요</a></li>
+                <li><a href="#">CEO인사말</a></li>
+                <li><a href="#">오시는길</a></li>
+              </ul>
+            </div>
+          </li>
+          <li>
+            <a href="#">사업분야</a>
+            <div>
+              <ul class="depth2">
+                <li><a href="#">사업분야1</a></li>
+                <li><a href="#">사업분야2</a></li>
+                <li><a href="#">사업분야3</a></li>
+                <li><a href="#">사업분야4</a></li>
+              </ul>
+            </div>
+          </li>
+          <li>
+            <a href="#">제품안내</a>
+           <div>
+              <ul class="depth2">
+                <li><a href="#">제품안내1</a></li>
+                <li><a href="#">제품안내2</a></li>
+                <li><a href="#">제품안내3</a></li>
+                <li><a href="#">제품안내4</a></li>
+              </ul>
+           </div>
+          </li>
+          <li>
+            <a href="#">커뮤니티</a>
+            <div>
+              <ul class="depth2">
+                <li><a href="#">공지사항</a></li>
+                <li><a href="#">홍보자료</a></li>
+                <li><a href="#">채용공고</a></li>
+              </ul>
+            </div>
+          </li>
+          <li>
+            <a href="#">고객지원</a>
+            <div>
+              <ul class="depth2">
+                <li><a href="#">1:1문의</a></li>
+                <li><a href="#">묻고답하기</a></li>
+                <li><a href="#">FAQ</a></li>
+              </ul>
+            </div>
+          </li>
+        </ul>
+      </nav>
+      <div class="membership">
+        <a href="#">로그인/회원가입</a>
+        <a href="#">오시는길</a>
+      </div>
+    </header
+  </body>
+</html>

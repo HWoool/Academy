@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- text-shadow  : 수평방향그림자거리값 수직방향 글미자 거리값 블럭밧 그림자색상; -->
+    <!-- text-shadow : 0 0 0 black;-->
+    <!-- 수평방향그림자거리값 : 양수면 오른쪽 방향으로 그림자, 음수면 왼쪽방향으로 그림자, 0값은 안보임-->
+    <!-- 수직방향 : 양수면 아럐쪽으로 그림자 , 음수는 위쪽 0이면 그림자 없음. -->
+    <!-- 블럭값 : 0은 선명한 그림자, 1px 이상부터 흐림효과가 적용된 그림자 -->
+    <!-- box-shadow : 수평그림자거리값 수직그림자거리값 블러값 크기값 색상  -->
+
+    <style>
+      div {
+        width: 300px;
+        height: 300px;
+        margin: 50px auto;
+        background-color: orange;
+        box-shadow: 5px 5px 5px 0 write inset;
+        /* 안쪽그림자 */
+      }
+      button {
+        cursor: url(./sample/5장/media/marker.png), auto;
+      }
+      div:hover {
+        box-shadow: 10px 10px 10px 0 gray;
+        /* 바깥쪽 그림자 */
+      }
+    </style>
+    <button type="button">김한울</button>
+    <div>박스에 그림자 효과 적용하기</div>
+  </body>
+</html>

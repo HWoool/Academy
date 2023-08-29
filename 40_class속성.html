@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .red {
+        color: red;
+      }
+      .font50 {
+        font-size: 50px;
+      }
+      .bgpink {
+        background: pink;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>김한울</h2>
+    <button onclick="colorChange()">글자색변경</button>
+    <button onclick="fontsizeChange()">글자크기변경</button>
+    <button onclick="bgChange()">배경색변경</button>
+    <button onclick="styleClear()">스타일지우기</button>
+
+    <script>
+      let elH2 = document.querySelector("h2");
+      let list = elH2.classList;
+
+      function colorChange() {
+        list.add("red");
+      }
+      function fontsizeChange() {
+        list.add("font50");
+      }
+      function bgChange() {
+        list.add("bgpink");
+      }
+      function styleClear() {
+        list.remove("font50", "bgpink", "red");
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <style>
+      div#box1 {
+        width: 300px;
+        height: 300px;
+        border: 1px solid #000000;
+        margin: 50px auto;
+        background-color: pink;
+        background-image: url(./sample/4장/media/spongebob.png);
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: 100% 100%;
+      }
+
+      div#box2 {
+        width: 300px;
+        height: 300px;
+        border: 1px solid #000;
+        margin: 50px auto;
+        background: pink url(./sample/5장/media/christmastree.png) no-repeat
+          right bottom / 100px auto;
+      }
+      div#box3 {
+        width: 300px;
+        height: 300px;
+        border: 1px solid #000;
+        margin: 50px auto;
+        background-image: url(./sample/5장/media/spade-2.png),
+          url(./sample/5장/media/spade-3.png);
+        background-size: 100px auto, 100px auto;
+        background-repeat: no-repeat;
+        background-position: left top, right bottom;
+      }
+
+      /* contain: 배경이미지는 오버플로우가 발생하지않음. */
+      /* cover :공간을 배경이미지로 꽉 채우고자 할때. 오버플로우 발생 */
+      /* left(0), top(0), right(100%), bottom(100%), center(50%) */
+    </style>
+    <div id="box1"></div>
+    <div id="box2"></div>
+    <div id="box3"></div>
+  </body>
+</html>

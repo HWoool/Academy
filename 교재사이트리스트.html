@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      /* nav > ul > li:nth-child(3) > a {} */
+      /* nav > ul > li:nth-child(5) ul li:last-child a */
+      /* a {
+        color: inherit;
+      }
+      #main li.not {
+        color: red;
+      }
+      #dw li.second {
+        color: green;
+      }
+       */
+    </style>
+  </head>
+  <body>
+    <h1>
+      <a href="http://webprogramming.co.kr" target="_blank">
+        <img
+          src="http://webprogramming.co.kr/files/attach/images/133/52e67495e598c2af819b4c7553aea96f.png"
+          alt="웹프로그래밍"
+        />
+      </a>
+    </h1>
+    <ul id="main">
+      <li><a href="#">Home</a></li>
+      <li>
+        <a href="#">Introduction</a>
+        <ul>
+          <li><a href="#">About Book</a></li>
+          <li><a href="#">About IDE</a></li>
+        </ul>
+      </li>
+      <li class="not"><a href="#">Notice</a></li>
+      <li>
+        <a href="#">Board</a>
+        <ul>
+          <li><a href="#">Know-How</a></li>
+          <li><a href="#">Admin's Blog</a></li>
+          <li><a href="#">Q&amp;A</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="#">Support</a>
+        <ul id="dw">
+          <li class="frist"><a href="#">Link</a></li>
+          <li class="second"><a href="#">DownLoad</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="#">Code</a>
+        <ul>
+          <li><a href="#">Example</a></li>
+        </ul>
+      </li>
+    </ul>
+  </body>
+</html>

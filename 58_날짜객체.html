@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div><span></span> : <span></span> : <span></span></div>
+    <script>
+      let now = new Date();
+      document.write(now + "<br>"); // 현재 시각
+      document.write(now.getFullYear() + "<br>"); // 현재 시각에 년도만 추출
+      document.write(now.getMonth() + 1 + "<br>"); // 월 0값이 1월
+      document.write(now.getDate() + "<br>"); // 일
+      document.write(now.getDay() + "<br>"); // 요일 (월:1 ~ 일:7)
+
+      switch (now.getDay()) {
+        case 1:
+          document.write("월요일");
+          break;
+        case 2:
+          document.write("화요일");
+          break;
+        case 3:
+          document.write("수요일");
+          break;
+        case 4:
+          document.write("목요일");
+          break;
+        case 5:
+          document.write("금요일");
+          break;
+        case 6:
+          document.write("토요일");
+          break;
+        case 0:
+          document.write("일요일");
+          break;
+      }
+
+      let hour = now.getHours();
+      let min = now.getMinutes();
+      let sec = now.getSeconds();
+      let span = document.querySelectorAll("span");
+      span[0].textContent = hour;
+      span[1].textContent = min;
+      span[2].textContent = sec;
+
+      // setInterval(함수, 시간(ms)) : 시간간격으로 반복해서 함수를 호출
+      setInterval(function () {
+        // console.log(Math.random());
+        let today = new Date();
+        let thour = today.getHours();
+        let tmin = today.getMinutes();
+        let tsec = today.getSeconds();
+      });
+    </script>
+  </body>
+</html>

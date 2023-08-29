@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>설문지조사</title>
+  </head>
+  <body>
+    <heder>
+      <h1>설문지</h1>
+      <p>
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit,
+        omnis. Tempore dolorem quos nihil! Perferendis exercitationem
+        dignissimos qui quo eius cupiditate quos id nam adipisci dolorem
+        accusantium non, quis optio.
+      </p>
+    </heder>
+    <hr />
+    <section>
+      <form action="#" method="post" name="question">
+        <p>
+          학년 <input type="radio" name="grade" checked /> 1학년
+          <input type="radio" name="grade" /> 2학년
+          <input type="radio" name="grade" /> 3학년
+          <input type="radio" name="grade" /> 4학년
+        </p>
+        <p>
+          성별
+          <input type="radio" name="gender" id="man" value="m" />남
+          <input type="radio" name="gender" id="woman" value="n" />여
+        </p>
+        <p>
+          관심분야
+          <select name="interrest" id="interrest">
+            <option value="software">소프트웨어</option>
+            <option value="hardware">하드웨어</option>
+            <option value="program">프로그램</option>
+          </select>
+        </p>
+        <p>
+          진로
+          <input type="checkbox" name="vision" value="개발" checked />개발
+          <input type="checkbox" name="vision" value="기획" />기획
+          <input type="checkbox" name="vision" value="영업" />영업
+          <input type="checkbox" name="vision" value="창업" />창업
+        </p>
+        <div>
+          <p>남기고 싶은 말</p>
+          <p>
+            <textarea
+              name="memo"
+              id="memo"
+              cols="30"
+              rows="10"
+              placeholder="글을 남겨주세요"
+            ></textarea>
+          </p>
+        </div>
+      </form>
+    </section>
+
+    <footer>
+      <p>Copyright 2022 by Kitae</p>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>하이퍼링크 만들기</title>
+  </head>
+  <body>
+    <!-- <a>태그는 이미지나 글자를 바로 감싸게 해야함. -->
+    <!-- 창열기방식 : target="_self" #기존창
+                      target="_blank" #새창
+                      target="_parent" #부모창
+                      target="_top"  #브라우저창
+    
+    -->
+    <h2>링크만들기</h2>
+    <hr />
+
+    <h3>포털사이트</h3>
+    <ul>
+      <li><a href="http://www.naver.com" target="_blank">네이버</a></li>
+      <li><a href="http://www.daum.net">다음</a></li>
+    </ul>
+
+    <h3>신문사이트 목록</h3>
+    <ul>
+      <li>
+        <a href="http://www.etnews.com"
+          ><img src="./sample/2장/media/iconetnews.png" alt="et뉴스"
+        /></a>
+      </li>
+      <li>
+        <a href="http://www.chosun.com"
+          ><img src="./sample/2장/media/iconchosun.png" alt="조선"
+        /></a>
+      </li>
+    </ul>
+
+    <h2>id 속성으로 앵커(anchor: 닻) 만들기</h2>
+    <ul id="Titlelist">
+      <li><a href="#area1">서론</a></li>
+      <li><a href="#area2">본론</a></li>
+      <li><a href="#area3">결론</a></li>
+    </ul>
+
+    <div id="area1">
+      <h3>서론 <a href="#Titlelist">↑위로</a></h3>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat inventore
+      recusandae officia explicabo iure eveniet fugit officiis perferendis
+      facilis! Ratione possimus at perspiciatis consequuntur modi non deserunt
+      aperiam, minima vitae. Nemo, veniam sint maiores qui corrupti quae ut hic
+      soluta et sunt non esse? Consectetur accusamus, porro placeat totam
+      exercitationem repellendus vel voluptatum. Ducimus natus laborum tempora
+      incidunt? Quidem, dolore. Iusto atque tenetur laboriosam, sunt quos ipsum
+      reiciendis repudiandae perspiciatis dicta amet eum maiores voluptatibus,
+      consequuntur ex ullam sapiente recusandae voluptate non, repellendus
+      libero accusamus dolorum quam sed nobis. Soluta?
+    </div>
+    <div id="area2">
+      <h3>본론<a href="#Titlelist">↑위로</a></h3>
+      Lorem ipsum, dolor sit amet consectetur adipisicing elit. Modi,
+      necessitatibus sequi quasi nobis nesciunt iusto veritatis error odit
+      cupiditate blanditiis excepturi illum quas odio officia, soluta tenetur
+      debitis nisi harum? Nulla molestiae maiores obcaecati praesentium sequi
+      voluptatem harum fuga porro sapiente, culpa voluptates deleniti
+      reprehenderit sint beatae, itaque odit amet earum. Consectetur maiores id
+      laboriosam esse atque reprehenderit nisi veniam! At exercitationem quia
+      reprehenderit praesentium, inventore cupiditate similique fugit maiores
+      molestiae distinctio! Recusandae exercitationem nostrum consectetur
+      mollitia consequuntur. Deleniti reprehenderit voluptate facere. Modi sequi
+      reiciendis blanditiis odit veniam obcaecati cumque? Ex eius laudantium
+      vitae? Necessitatibus maxime numquam vel voluptatem similique harum enim,
+      nostrum sit, sequi quo in quaerat! Recusandae odit deserunt quam expedita
+      odio ut sapiente. Possimus, autem reprehenderit. Officiis. Atque non iure,
+      nam recusandae dolorem velit fuga, laboriosam est voluptas sit, excepturi
+      impedit. Quidem nemo quasi debitis a! Sint consequatur quos veritatis
+      molestias est modi dicta quasi, illo tempore! Placeat quia, suscipit
+      tenetur assumenda ipsa earum non exercitationem perferendis. Ad amet, enim
+      deserunt eligendi repellendus incidunt, ex sint animi eum maiores sunt
+      nisi deleniti, unde itaque reiciendis voluptas et! Blanditiis, nobis
+      aperiam aut provident placeat ducimus accusantium quas repudiandae
+      voluptatibus saepe consequatur ullam doloremque deserunt non libero quasi
+      dignissimos pariatur numquam laudantium officia iste. Praesentium ipsum
+      voluptate quasi quidem. Nesciunt obcaecati, nam cum dolor sequi ipsa quasi
+      hic, natus dicta aliquam maiores! Dolore ipsa accusamus ut aspernatur
+      temporibus laboriosam aut voluptatum quo ea quis, odit, saepe, quas minus
+      eum! Perspiciatis praesentium aliquid sequi ex ab id corrupti nobis
+      repellat numquam, quae deserunt dolor veniam, cupiditate similique
+      quisquam porro exercitationem facilis voluptas harum ipsa consequuntur
+      saepe explicabo voluptatem corporis! Obcaecati? Amet sint ducimus neque
+      error facilis aut aliquid atque reiciendis fugiat, harum, hic quos saepe
+      facere quaerat illo repudiandae, explicabo minima asperiores architecto.
+      Illum ex dolores quos cum, impedit veniam!
+    </div>
+
+    <div id="area3">
+      <h3>결론<a href="#Titlelist">↑위로</a></h3>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem iusto, amet
+      tempora minima quas magnam doloribus nihil illum eos ratione eius
+      perferendis odit dolorem vitae? Iusto veritatis rerum quae voluptatum.
+      Consequuntur error ut laboriosam, ab et porro, debitis saepe praesentium
+      quod asperiores minima, tempora repudiandae. Doloribus eum exercitationem
+      soluta ut, voluptates sit. Non temporibus velit veniam repudiandae alias
+      autem eos.
+    </div>
+
+    <h2>파일 다운로드 링크 만들기</h2>
+    <ul>
+      <li>
+        <a href="./sample/2장/media/Elvis.png" download
+          >엘비스프레슬리 사진 다운로드</a
+        >
+      </li>
+      <li>
+        <a href="./sample/2장/media/chapter9.pdf" download
+          >챕터9장 파일 다운로드</a
+        >
+      </li>
+      <li>
+        <a href="./sample/2장/media/EmbraceableYou.mp3" download
+          >오디오 다운로드</a
+        >
+      </li>
+    </ul>
+  </body>
+</html>

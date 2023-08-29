@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // 변수 선언 키워드 : var, let, const
+      // 전역변수 선언 : var ( 함수문 블록에서 선언하면 지역변수임)
+      // 블록(함수문,조건문,반복문)변수(지역변수) 선언 : let(var) , const
+      var a;
+      console.log(a); // undefined
+      a = 10;
+      console.log(a); // 10
+
+      var a = 20;
+      console.log(a); // 20
+
+      //   let b = 10;
+      //   console.log(b);
+      //   let b = 20;
+
+      function add() {
+        // var a = 30;
+        console.log(a);
+      }
+      add();
+      console.log(a);
+
+      let kim = "김한울";
+      {
+        // let kim = "홍길동";
+        console.log(kim);
+      }
+      //   console.log(kim);
+    </script>
+  </body>
+</html>

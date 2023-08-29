@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        border: 10px solid red;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      /* 넓이가 지정된 박스를 부모의 중간으로 정렬할때는 margin:0px auto; 위의 속성 추가할것. */
+      div {
+        padding: 10px;
+        margin: 10px auto;
+        width: 500px;
+        background-color: lime;
+      }
+      body {
+        padding: 10px;
+        margin: 10px;
+      }
+      html {
+        padding: 10px;
+        margin: 10px;
+      }
+      p {
+        padding: 10px;
+        margin: 10px auto;
+        width: 300px;
+        background-color: brown;
+      }
+      /* 인라인태그는 상하 margin 부작용이 생기므로 block 성격을 추가해서 문제를 해결함. */
+      span {
+        padding: 10px;
+        margin: 10px;
+        display: inline-block;
+      }
+      ul {
+        list-style: none;
+        border: none;
+      }
+      ul li {
+        border-color: green;
+        width: 200px;
+        display: inline-block;
+      }
+      /* 인라인 태그 : width, height가 적용안됨. -> display:block으로 성격을 바꾸면 적용 */
+      ul li a {
+        border: none;
+        display: block;
+        padding: 10px;
+        text-align: center;
+        color: black;
+        text-decoration: none;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <p>
+        Lorem ipsum <span>dolor</span>, sit amet consectetur adipisicing elit.
+        Tempore, est pariatur et cumque tempora ipsa qui quam obcaecati eius sit
+        ipsum perspiciatis hic nostrum porro saepe amet quibusdam quod
+        repudiandae? Illum id laborum commodi officia possimus voluptate velit,
+        distinctio laboriosam illo placeat nostrum quae perspiciatis cupiditate
+        ex ullam et sapiente cum amet. Molestias voluptas magnam repudiandae
+        animi dolores eaque temporibus.
+      </p>
+    </div>
+
+    <!-- 박스의 기본 넓이 : 블록태그 부모와 같은 넓이를 자동상속
+                            인라인태그는 자식이랑 같은 넓이 -->
+    <ul>
+      <li><a href="">메뉴1</a></li>
+      <li><a href="">메뉴2</a></li>
+      <li><a href="">메뉴3</a></li>
+      <li><a href="">메뉴4</a></li>
+    </ul>
+  </body>
+</html>

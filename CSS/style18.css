@@ -1,0 +1,64 @@
+/* body {
+  background-color: skyblue;
+}
+h3 {
+  color: purple;
+}
+hr {
+  border: 5px solid blue;
+}
+p.second {
+  color: black;
+  font-weight: bolder;
+  font-size: xx-large;
+} */
+/* li.second {
+  color: blue; */
+/* } */
+/* p {
+  color: orangered;
+} */
+/* #list1 {
+  border: 2px solid red;
+}
+.depth1 {
+  border: 2px solid blue;
+} */
+
+/* #list1 .first {
+  color: brown;
+} */
+/* #list1 .first {
+  color: black;
+} */
+/* .depth1 {
+  color: red;
+} */
+/* ul {
+  color: blueviolet;
+} */
+/* * {
+  color: green;
+} */
+/* 배경색은 red, 글자색은 white, 테두리는 3px 실선 검정색*/
+/* 스타일 적용 방법
+     1. 인라인스타일(태그 뒤에 바로 나옴) 
+     2. 내부스타일(head 구역에 <style>로 감싸서 적용)
+     3. 외부스타일(css 파일을 만들어서 <link>*/
+/* 부모의 스타일 속성은 대부분 자식에게 상속됨. */
+/* id(#) 선택지는 중복되면 안됨.
+   class(.) 선택자는 중복가능. 
+   */
+/* span {
+  color: blue;
+  font-size: 20px;
+} */
+/* span {
+  background-color: red;
+  color: white;
+  border: 3px solid black;
+  font-weight: bolder;
+} */
+
+/* #a {
+  } */

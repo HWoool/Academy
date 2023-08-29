@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      a {
+        color: inherit;
+      }
+      h3,
+      li {
+        color: brown;
+      }
+      div > div > strong {
+        background-color: yellow;
+      }
+      ul strong {
+        color: dodgerblue;
+      }
+      .warning {
+        color: red;
+      }
+      body.main {
+        background: aliceblue;
+      }
+      #list {
+        background: mistyrose;
+      }
+      #list span {
+        color: forestgreen;
+      }
+      h3::first-letter {
+        color: red;
+      }
+      p::first-line {
+        color: red;
+      }
+      li:hover {
+        background: yellowgreen;
+      }
+      /* #list li:hover {
+        color: yellowgreen;
+      }
+      #list li:hover span {
+        color: yellowgreen;
+      }
+      #list li:hover strong {
+        color: yellowgreen;
+      } */
+      #menu li a:link {
+        color: green;
+        text-decoration: none;
+      }
+      /* #menu li a:active {
+        color: brown;
+      } */
+      #menu li a:hover {
+        color: red;
+        text-decoration: underline;
+      }
+      /* #menu li a:visited {
+        color: orange;
+      } */
+      /* #menu li a:focus {
+        outline: none;
+        color: yellow;          
+      } */
+      /* #menu li:nth-child(1) */
+      /* #menu li:first-child a {
+        color: blue;
+      }
+      #menu li:nth-child(2) a {
+        color: orange;
+      }
+      #menu li:nth-child(3) a {
+        color: gray;
+      }
+      #menu li:last-child a {
+        color: violet;
+      } */
+      #menu li:nth-child(odd) {
+        color: orange;
+      }
+      #menu li:nth-child(even) {
+        color: gray;
+      }
+    </style>
+  </head>
+  <body class="main">
+    <h3>Web progamming</h3>
+    <hr />
+    <div>
+      <strong>김한울</strong>
+      <div>2학기 <strong>학습내용</strong>입니다.</div>
+      <ul id="list">
+        <li><span>HTML5</span></li>
+        <li><strong>CSS</strong></li>
+        <li>JAVASCRIPT</li>
+      </ul>
+      <div class="warning">60점 이하는 F</div>
+    </div>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae quaerat
+      repudiandae nihil molestiae eum officia magni cumque distinctio quibusdam
+      laudantium, est assumenda, nam illum iusto non velit. Expedita, a
+      voluptas! Praesentium adipisci totam aut quia doloribus accusantium neque
+      eaque, quo ut pariatur, architecto tenetur? Repudiandae quidem, fugit
+      minima explicabo exercitationem, hic repellat quis voluptatem odio
+      aliquid, tempore maiores fuga totam. Tempore repellendus labore magni
+      suscipit dignissimos ullam dolor nobis, ipsum natus molestiae illum
+      obcaecati vitae. In, sapiente. Reiciendis eius sint, ut libero fugiat
+      magni, esse eaque odit vero distinctio accusantium.
+    </p>
+    <!-- a:link 아무것도하지않았을때 스타일 ( color:blue; text-decoration:underline) -->
+    <!-- a:active 클릭하는 순간의 스타일 ( color:red;) -->
+    <!-- a:hover 마우스오버했을때의 스타일 ( color:blue; text-decoration:underline) -->
+    <!-- a:visited 이동한 후에 돌아왔을때 스타일 ( color:voliet) -->
+    <!-- a:focus 탭키를 눌러서 포커스됐을때 스타일 (color:blue; text-decoration:underline) -->
+    <!-- nth-child(n) : 이름이 같은 형제관계에서만 사용함. -->
+    <!-- first-child -->
+    <ul id="menu">
+      <li><a href="#">메뉴1</a></li>
+      <li><a href="#">메뉴2</a></li>
+      <li><a href="#">메뉴3</a></li>
+      <li><a href="#">메뉴4</a></li>
+    </ul>
+  </body>
+</html>
